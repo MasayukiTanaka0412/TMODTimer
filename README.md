@@ -43,16 +43,6 @@ TMOD Timer は、Toastmasters club 例会における **Toastmaster of the Day (
 3. `セット` / `Set` を押して予定グラフを表示
 4. `スタート` / `Start` を押して経過時間の計測を開始
 
-### ローカル実行
-依存インストールなしで実行できます。例:
-
-```bash
-python3 -m http.server 4173
-```
-
-ブラウザで以下へアクセス:
-- 日本語: `http://localhost:4173/index.html`
-- English: `http://localhost:4173/index_en.html`
 
 ---
 
@@ -91,14 +81,3 @@ You can edit section names and durations (in minutes), visualize the planned tim
 2. Edit sections and durations as needed
 3. Click `セット` / `Set` to render the planned chart
 4. Click `スタート` / `Start` to begin elapsed-time tracking
-
-### Run Locally
-No build step is required. Example:
-
-```bash
-python3 -m http.server 4173
-```
-
-Then open:
-- JP: `http://localhost:4173/index.html`
-- EN: `http://localhost:4173/index_en.html`

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TMOD Timer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-26XTYS2QEH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-26XTYS2QEH');
+    </script>
+  </head>
+  <body>
+    <main class="container">
+      <h1>Toastmasters of the Day タイムマネジメント</h1>
+
+      <section class="editor" aria-label="セクション設定">
+        <div id="section-list"></div>
+        <div class="controls">
+          <button id="add-section" type="button">セクション追加</button>
+          <button id="set-chart" type="button">セット</button>
+          <button id="start-timer" type="button">スタート</button>
+        </div>
+      </section>
+
+      <section class="chart-wrap" aria-label="時間グラフ">
+        <canvas id="timeline-chart"></canvas>
+      </section>
+    </main>
+
+    <template id="section-row-template">
+      <div class="section-row">
+        <input class="section-name" type="text" placeholder="セクション名" />
+        <label>
+          <input class="section-duration" type="number" min="0" step="1" /> 分
+        </label>
+        <div class="row-actions">
+          <button class="move-up" type="button">↑</button>
+          <button class="move-down" type="button">↓</button>
+          <button class="remove" type="button">削除</button>
+        </div>
+      </div>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
